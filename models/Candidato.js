@@ -1,14 +1,18 @@
 const { Schema, model } = require('mongoose');
 
 const CandidatoSchema = Schema({
-  name: {
+  nombre: {
     type: String,
     required: true,
   },
   dni: {
     type: String,
-    require: true,
-    uniqued: true,
+    required: true,
+    unique: true,
+  },
+  sede: {
+    type: String,
+    required: true,
   },
 });
 
