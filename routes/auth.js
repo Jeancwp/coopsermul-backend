@@ -11,6 +11,7 @@ const { validarJWT } = require('../middlewares/validar-jwt');
 
 const {
   crearUsuario,
+  actualizarUsuario,
   loginUsuario,
   revalidarToken,
 } = require('../controllers/auth');
@@ -23,6 +24,14 @@ router.post(
     validarCampos,
   ],
   crearUsuario
+);
+
+router.put(
+  '/:id',
+  [
+    //middlewares
+  ],
+  actualizarUsuario
 );
 
 router.post(
